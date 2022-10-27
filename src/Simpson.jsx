@@ -7,10 +7,8 @@ function Simpson() {
   const handleClick = () => {
     fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
       .then((res) => res.json())
-      .then((res) => (
-        (document.querySelector("#image").src = res[0].image))
-       
-          .then((res) => setCharacter(res)))
+      .then((res) => ((document.querySelector("#image").src = res[0].image)))
+          .then((res) => setCharacter(res))
       }
     return (
       <div>
