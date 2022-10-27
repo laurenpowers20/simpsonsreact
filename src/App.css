@@ -1,5 +1,7 @@
 body {
+  background-image: url(./images/Wallpaper-Clouds-Figure-Background-Simpsons-Art-Begin131920x1200.jpg);
   text-align: center;
+
 }
 
 .modal {
@@ -22,6 +24,9 @@ body {
 .modal-body {
   padding: 10px;
   background-color: white;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee
+  border: 2px solid #eee
+}
+
+button {
+ background-color: aquamarine;
 }
