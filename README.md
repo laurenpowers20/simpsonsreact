@@ -2,6 +2,9 @@
 
 A Simpsons application produced withe React.js.
 
+![ralph](/src/images/screenshot.png)
+![modal](/src/images/modal.png)
+
 ## Technologies Used
 
 React.js
@@ -9,6 +12,7 @@ React.js
 ## Usage
 
 The user will enter sight and a random Simpsons character will appear. User can click on "Get Info!" to display a modal with the character name and a quote.
+
 
 ## References and Contributions
 
