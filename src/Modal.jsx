@@ -1,5 +1,3 @@
-import Simpson from "./Simpson"
-
 
 function Modal(props) {
   if (!props.show) {

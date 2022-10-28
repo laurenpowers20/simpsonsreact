@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Modal from "./Modal";
-import App from './App';
+
 
 function Simpson() {
   const [character, setCharacter] = useState([]);
@@ -10,12 +10,11 @@ function Simpson() {
     const response = await fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
     const json = await response.json()
     setCharacter(json)
-    
   }
 
   if (character.length <= 0) {
     return <><h1> Click button for new character</h1>
-      <button onClick={getCharacters}>Get Characters</button></>
+      <button onClick={getCharacters}>Get Character</button></>
   } else {
     return (
       <div className="character">
