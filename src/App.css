@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Rock+Salt&display=swap');
+
 body {
   background-image: url(./images/Wallpaper-Clouds-Figure-Background-Simpsons-Art-Begin131920x1200.jpg);
   text-align: center;
+  font-family: 'Rock Salt', cursive;
 
 }
 
@@ -14,6 +17,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Cabin', sans-serif;
+}
+
+.logo {
+  width: 210px;
 }
 
 .modal-header, .modal-footer {
@@ -27,6 +35,20 @@ body {
   border: 2px solid #eee
 }
 
+.image {
+  height: 400px;
+}
+
 button {
- background-color: aquamarine;
+ background-color: white;
+ margin: 10px;
+ font-family: 'Rock Salt', cursive;
+ box-shadow: 11px 10px 13px 0px rgba(0,0,0,0.75);
+}
+
+@media only screen and (max-width: 600px) {
+  .image {
+    height: 300px;
+  }
+
 }

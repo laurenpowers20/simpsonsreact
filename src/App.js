@@ -1,18 +1,15 @@
 import "./App.css";
 import Simpson from "./Simpson";
 import React, { useState } from "react";
+import logo from "./images/logo.png";
 
 function App() {
-
-
   return (
     <div className="App">
-      <h1>Quote Generator</h1>
+      <img src={logo} alt="Logo" className="logo" />
+      <h2>Quote Generator</h2>
       <Simpson />
-      <div className="App">
-       
-        
-      </div>
+      <div className="App"></div>
     </div>
   );
 }

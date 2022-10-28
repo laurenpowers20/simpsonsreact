@@ -10,7 +10,7 @@ function Modal(props) {
     <div className="modal" onClick={props.onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
-          <h4 className="modal-title">{props.name}</h4>
+          <h2 className="modal-title">{props.name}</h2>
         </div>
         <div className="modal-body">
         <p>{props.quote}</p>

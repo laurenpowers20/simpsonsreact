@@ -21,8 +21,7 @@ function Simpson() {
       <div className="character">
         {character.map((simpsonscharacter) => {
           return <div key={simpsonscharacter.character}>
-            {/* <h1>{simpsonscharacter.character}</h1> */}
-            <img src={simpsonscharacter.image} alt={simpsonscharacter.characer} />
+            <img src={simpsonscharacter.image} alt={simpsonscharacter.characer} className="image" />
           </div>
         })}
         <Modal
