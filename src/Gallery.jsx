@@ -1,34 +1,36 @@
-// import React, { useState, useEffect } from "react";
-// import Image from "./Image";
+import React, { useState, useEffect } from "react";
+import Image from "./Image";
 
-// function Gallery() {
-//   const [images, setImages] = useState([])
-//   const [gallery, setGallery] = useState(false)
+function Gallery() {
+  //const [images, setImages] = useState([])
+  const [character, setCharacter] = useState([])
+  const [gallery, setGallery] = useState(false)
 
-//   useEffect(() => {
-//     const fetchImages = async () => {
-//       const response = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?count=4`)
-//       const data = await response.json()
-//       setImages(data)
-//     }
-//     fetchImages()
-//   },[])
-//   return (
-//     <>
-//       {!images ? (
-//         <h2 className="flex items-center justify-center h-screen font-bold text-center">Loading..</h2> ) : (
-//         <section>
-//           <button>Get More!</button>
-//           <div className="gallery">
-//             {images.map((image) => (
-//               <Image key={image.image} {...image} />
-//             ))}
-//           </div>
+  useEffect(() => {
+    const fetchCharacters = async () => {
+      const response = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?count=4`)
+      const data = await response.json()
+      setCharacter(data)
+    }
+    fetchCharacters()
+  }, [])
+ 
+    return (
+      <>
+        {!character ? (
+          <h2 className="flex items-center justify-center h-screen font-bold text-center">Loading..</h2>) : (
+          <section>
+            <div className="gallery">
+              {character.map((character) => (
+                <Image key={chararcter.character} {...character} />
+              ))}
+            </div>
   
-//         </section>
-//      )}
-//       </>
-//   )
-// }
+          </section>
+        )}
+      </>
+    )
+  }
 
-//export default Gallery
+
+export default Gallery

@@ -1,5 +1,7 @@
 # The Simpsons Quote Generator v 2.0
 
+[Live Site](https://simpsonsquotegenerator.netlify.app/)
+
 A Simpsons application produced withe React.js.
 
 ![ralph](/src/images/screenshot.png)
@@ -12,7 +14,6 @@ React.js
 ## Usage
 
 The user will enter sight and a random Simpsons character will appear. User can click on "Get Info!" to display a modal with the character name and a quote.
-
 
 ## References and Contributions
 
