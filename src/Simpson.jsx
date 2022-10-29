@@ -1,33 +1,40 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
-import App from './App';
+
 
 function Simpson() {
-  const [character, setCharacter] = useState("");
+  const [character, setCharacter] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
-  const handleClick = () => {
-    fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
-      .then((res) => res.json())
-      .then((res) => ((document.querySelector("#image").src = res[0].image)))
-      .then((res) => ((document.querySelector("#character").src = res[0].character)))
-      .then((res) => setCharacter(res))
-      .then((res) => (console.log(res[0]) ))
-
+  const getCharacters = async() => {
+    const response = await fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
+    const json = await response.json()
+    setCharacter(json)
   }
 
-  return (
-    <div>
-      {character}
-      <img id="image" src="" />
-        <div>
-        <button onClick={handleClick} id="newCharacter">New Character!</button>
-        <Modal onClose={() => setShowModal(false)} show={showModal}  />
+  if (character.length <= 0) {
+    return <><h1 className="homepage-title"> Click button for new character</h1>
+      <button onClick={getCharacters}>Get Character</button></>
+  } else {
+    return (
+      <div className="character">
+        {character.map((simpsonscharacter) => {
+          return <div key={simpsonscharacter.character}>
+            <img src={simpsonscharacter.image} alt={simpsonscharacter.characer} className="image" />
+          </div>
+        })}
+        <Modal
+          onClose={() => setShowModal(false)}
+          show={showModal}
+          quote={character[0].quote}
+          name={character[0].character}
+        />
         <button onClick={() => setShowModal(true)}>Get info!</button>
-        </div>
+        <button onClick={getCharacters}>New Character!</button>
       </div>
-    );
+    )
   }
+}
 
 
 
