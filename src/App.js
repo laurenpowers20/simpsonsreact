@@ -1,8 +1,6 @@
 import "./App.css";
 import Simpson from "./Simpson";
 import logo from "./images/logo.png";
-//import Gallery from "./Gallery";
-
 
 function App() {
   return (
@@ -11,9 +9,8 @@ function App() {
       <h2>Quote Generator</h2>
       <Simpson />
       <div className="App"></div>
-    
     </div>
-  )
+  );
 }
 
 export default App;

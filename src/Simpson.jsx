@@ -13,7 +13,7 @@ function Simpson() {
   }
 
   if (character.length <= 0) {
-    return <><h1> Click button for new character</h1>
+    return <><h1 className="homepage-title"> Click button for new character</h1>
       <button onClick={getCharacters}>Get Character</button></>
   } else {
     return (
