@@ -1,6 +1,7 @@
 import "./App.css";
 import Simpson from "./Simpson";
 import logo from "./images/logo.png";
+import Gallery from "./Gallery";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <img src={logo} alt="Logo" className="logo" />
       <h2>Quote Generator</h2>
       <Simpson />
+      <Gallery />
       <div className="App"></div>
     </div>
   );
